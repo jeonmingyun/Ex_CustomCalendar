@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/calendar_frame"
+    <RelativeLayout
+        android:id="@+id/calender_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:background="#ffffff">
 
-    <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calender_header_listview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/listview_side_padding_15"
+            android:paddingEnd="@dimen/listview_side_padding_15"/>
+
+        <Button
+            android:id="@+id/open_date_picker_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calender_header_listview"
+            android:layout_centerHorizontal="true"
+            android:text="button"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calender_detail_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/calendar_frame"
-        android:text="test text"/>
+        android:layout_below="@+id/calender_header"
+        android:paddingStart="@dimen/listview_side_padding_15"
+        android:paddingEnd="@dimen/listview_side_padding_15"
+        android:background="@color/gray_bg"/>
 
 </RelativeLayout>

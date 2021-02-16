@@ -1,6 +1,6 @@
-package model;
+package com.example.customcalendar.vo;
 
-public class CalendarModel {
+public class CalendarDateVO {
     private int maxDateOfMonth = 0; // 현재 달의 일 수
     private int year = 2021; // 현재 년도
     private int month = 1; // 현재 월 (1월은 0)

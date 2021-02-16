@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_calendar_header_item_15"
+    android:paddingBottom="@dimen/padding_calendar_header_item_15"
+    android:paddingStart="@dimen/padding_calendar_header_item_20"
+    android:paddingEnd="@dimen/padding_calendar_header_item_20">
+
+    <TextView
+        android:id="@+id/header_day_of_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="5dp"
+        android:textSize="17sp"
+        android:textColor="#aeaeae"
+        android:text="일"/>
+
+    <RelativeLayout
+        android:id="@+id/header_date_wrapper"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/header_day_of_week"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/calendar_header_item">
+
+        <TextView
+            android:id="@+id/header_date_of_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="1"/>
+
+        <View
+            android:id="@+id/header_date_point"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_below="@id/header_date_of_month"
+            android:layout_centerHorizontal="true"
+            android:background="#000000"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
