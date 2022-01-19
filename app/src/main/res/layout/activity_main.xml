@@ -16,7 +16,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/calender_header_listview"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingStart="@dimen/listview_side_padding_15"
             android:paddingEnd="@dimen/listview_side_padding_15"/>

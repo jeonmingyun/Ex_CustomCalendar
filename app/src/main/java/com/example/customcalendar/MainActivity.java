@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void onDateSet(DatePicker view, int year, int month, int date) {
             int position = date-1;
-            Toast.makeText(getApplicationContext(), year + "년" + month + "월" + date +"일", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), year + "년" + (month+1) + "월" + date +"일", Toast.LENGTH_SHORT).show();
 
             setCurrentDate(year, month, date);
             setCalendarDate(year, month, date);

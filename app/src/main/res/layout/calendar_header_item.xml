@@ -22,7 +22,7 @@
     <RelativeLayout
         android:id="@+id/header_date_wrapper"
         android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/header_day_of_week"
         android:layout_centerHorizontal="true"
         android:background="@drawable/calendar_header_item">
@@ -43,7 +43,7 @@
             android:layout_height="5dp"
             android:layout_below="@id/header_date_of_month"
             android:layout_centerHorizontal="true"
-            android:background="#000000"/>
+            android:background="#000000" />
 
     </RelativeLayout>
 

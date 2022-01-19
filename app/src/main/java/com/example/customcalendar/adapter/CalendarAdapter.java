@@ -1,6 +1,5 @@
 package com.example.customcalendar.adapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,13 +7,13 @@ import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.customcalendar.R;
 import com.example.customcalendar.vo.CalendarItemVO;
 
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.CalendarHolder> {
     private ArrayList<CalendarItemVO> itemList;
@@ -53,7 +52,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
 
     @Override
     public void onBindViewHolder(@NonNull CalendarHolder holder, int position) {
-        if(itemList.get(position).getProductName() == null && itemList.get(position).getProductMemo() == null) {
+        if (itemList.get(position).getProductName() == null && itemList.get(position).getProductMemo() == null) {
             holder.productWrapper.setVisibility(View.GONE);
         } else {
             holder.dateOfMonth.setText(itemList.get(position).getDateOfMonth());
@@ -85,13 +84,13 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
         this.notifyDataSetChanged();
     }
 
-    private String dateFormat(String date){
-        String year = date.substring(0,4).trim();
-        String month = date.substring(4,6).trim();
-        String dateTime = date.substring(6,8).trim();
-        String hour = date.substring(8,10).trim();
-        String min = date.substring(10,12).trim();
-        String sec = date.substring(12,14).trim();
+    private String dateFormat(String date) {
+        String year = date.substring(0, 4).trim();
+        String month = date.substring(4, 6).trim();
+        String dateTime = date.substring(6, 8).trim();
+        String hour = date.substring(8, 10).trim();
+        String min = date.substring(10, 12).trim();
+        String sec = date.substring(12, 14).trim();
 
         return year + "." + month + "." + dateTime + " " + hour + ":" + min + ":" + sec;
     }
